@@ -1,41 +1,33 @@
 <?php
-// +----------------------------------------------------------------------
-// | 零云 [ 简单 高效 卓越 ]
-// +----------------------------------------------------------------------
-// | Copyright (c) 2016 http://www.lingyun.net All rights reserved.
-// +----------------------------------------------------------------------
-// | Author: jry <598821125@qq.com>
-// +----------------------------------------------------------------------
-
 /**
- * Content-type设置
+ * Content-type configration
  */
 header("Content-type: text/html; charset=utf-8");
 
 /**
- * PHP版本检查
+ * PHP version check
  */
 if (version_compare(PHP_VERSION, '5.4.0', '<')) {
     die('require PHP > 5.4.0 !');
 }
 
 /**
- * PHP报错设置
+ * PHP Error Configration
  */
 error_reporting(E_ALL ^ E_NOTICE ^ E_WARNING);
 
 /**
- * 开发模式环境变量前缀
+ * Dev environment prefix
  */
 define('ENV_PRE', 'LY_');
 
 /**
- * 定义后台标记
+ * Admin system flag
  */
 define('MODULE_MARK', 'Admin');
 
 /**
- * 应用目录设置
+ * Application directories
  * 安全期间，建议安装调试完成后移动到非WEB目录
  */
 define('APP_PATH', './Application/');
@@ -43,13 +35,13 @@ define('APP_DIR', './Application/');
 define('BUILDER_DIR', APP_DIR . 'Common/util/lyf/builder/');
 
 /**
- * 缓存目录设置
+ * Cache directory
  * 此目录必须可写，建议移动到非WEB目录
  */
 define('RUNTIME_PATH', './Runtime/');
 
 /**
- * 静态缓存目录设置
+ * Static files directory
  * 此目录必须可写，建议移动到非WEB目录
  */
 define('HTML_PATH', RUNTIME_PATH . 'Html/');

@@ -25,7 +25,7 @@ class NavController extends HomeController
         $this->assign('meta_title', "首页");
         $this->display();
     }
-
+    
     /**
      * 单页类型
      * @author jry <598821125@qq.com>
@@ -41,11 +41,10 @@ class NavController extends HomeController
         }
 
         // 显示模板
-        $template = 'detail';
-        if ($info['detail_template']) {
+        $template = 'detail';        
+        if ($info['detail_template']) {            
             $template = $info['detail_template'];
-        }
-
+        }        
         $this->assign('info', $info);
         $this->assign('meta_title', $info['title']);
         $this->display($template);
